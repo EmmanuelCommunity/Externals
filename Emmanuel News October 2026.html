@@ -1,4 +1,3 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Emmanuel News October 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -460,6 +459,7 @@ details.ans .in { padding: 4px 18px 18px; display: grid; gap: 10px; font-size: 1
           <li>The Emmanuel Community traces its roots to a prayer group founded in Paris in 1972 by Pierre Goursat and a co-founder. Which French pilgrimage town, tied to apparitions of the Sacred Heart, became the site of the Community's first major settlement in 1975 and a key milestone in its worldwide spread?</li>
           <li>As of recent counts, the Emmanuel Community is active in roughly how many countries: 20, 40, or 60+?</li>
         </ol>
+        <p class="sub" style="margin-top:14px">Answers are at the bottom of this page. <a href="#answers">Jump to the answers</a></p>
       </div>
     </div>
   </section>
@@ -531,18 +531,25 @@ details.ans .in { padding: 4px 18px 18px; display: grid; gap: 10px; font-size: 1
 
   <section class="cta" aria-labelledby="h-cta">
     <svg class="i" style="font-size:34px;color:#e8bd5c"><use href="#i-chat"/></svg>
-    <h2 id="h-cta">We would love to hear from you</h2>
-    <p>Reply to this message and tell us your name and where you live. You can also ask us for the National Gathering live-stream link, or to have a prayer intention lifted up. There is no obligation, only an open door.</p>
-    <div class="reach">
-      <span class="lbl">Write to us</span>
-      <span class="val">[your email address]</span>
-    </div>
+    <h2 id="h-cta">Questions or prayer requests?</h2>
+    <p>Let us know if you have any questions, or anything you would like us to pray for.</p>
   </section>
 
   <div class="sign">
     <p>We are praying for you.</p>
     <p class="come">Come, Holy Spirit!</p>
   </div>
+  <section class="section relics" id="answers" aria-labelledby="h-answers">
+    <div class="eyebrow">Fun trivia</div>
+    <h2 id="h-answers">Trivia answers</h2>
+    <ol class="qs">
+      <li>1992, by a decree from the Pontifical Council for the Laity on December 8, 1992.</li>
+      <li>Paray-le-Monial.</li>
+      <li>60+ countries (some sources cite 65), with thousands of committed members including priests, consecrated brothers and sisters, and families.</li>
+    </ol>
+    <p class="sub"><a href="#trivia">Back to the questions</a></p>
+  </section>
+
   <div class="social">
     <a href="https://www.instagram.com/emmanuel_community_usa/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="i"><use href="#i-insta"/></svg></a>
     <a href="https://www.facebook.com/profile.php?id=61595087184176" target="_blank" rel="noopener" aria-label="Facebook"><svg class="i"><use href="#i-fb"/></svg></a>
@@ -551,4 +558,19 @@ details.ans .in { padding: 4px 18px 18px; display: grid; gap: 10px; font-size: 1
   <div class="foot"><span>Adoration</span>·<span>Compassion</span>·<span>Evangelization</span></div>
 </main>
 
-</body></html>
+<script>
+(function () {
+  var calm = false;
+  try { calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches; } catch (e) {}
+  document.addEventListener("click", function (ev) {
+    var a = ev.target.closest ? ev.target.closest('a[href^="#"]') : null;
+    if (!a) return;
+    var id = decodeURIComponent(a.getAttribute("href").slice(1));
+    var el = id ? document.getElementById(id) : null;
+    if (!el) return;
+    ev.preventDefault();
+    try { el.scrollIntoView({ behavior: calm ? "auto" : "smooth", block: "start" }); }
+    catch (e) { el.scrollIntoView(); }
+  });
+})();
+</script>
