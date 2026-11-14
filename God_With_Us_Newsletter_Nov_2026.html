@@ -46,11 +46,18 @@ h2::after{content:"";display:block;width:70px;height:3px;background:var(--gold);
 .sign{margin-top:1.4em;font-style:italic;color:var(--deep)}
 .sign b{font-style:normal}
 
-.timeline{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;margin-top:34px}
-.tl{background:var(--card);border:1px solid #eadfc6;border-top:4px solid var(--gold);border-radius:10px;padding:14px 16px 16px;box-shadow:0 2px 10px rgba(90,40,20,.06)}
-.tl b{display:block;color:var(--red);font-size:24px;line-height:1.1}
-.tl em{display:block;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);font-style:normal;margin:.15em 0 .4em}
-.tl span{font-size:15.5px;line-height:1.45;display:block}
+.timeline{position:relative;max-width:780px;margin-top:36px}
+.timeline::before{content:"";position:absolute;left:94px;top:10px;bottom:10px;width:3px;background:linear-gradient(var(--gold),#e3cd96);border-radius:2px}
+.tl{position:relative;display:grid;grid-template-columns:78px 1fr;column-gap:36px;margin:0 0 26px}
+.tl::before{content:"";position:absolute;left:88px;top:9px;width:15px;height:15px;border-radius:50%;background:var(--cream);border:3px solid var(--gold);box-sizing:border-box}
+.tl b{grid-column:1;grid-row:1 / span 2;text-align:right;color:var(--red);font-size:25px;line-height:1.15;padding-top:1px}
+.tl em{grid-column:2;display:block;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);font-style:normal;margin:4px 0 2px}
+.tl span{grid-column:2;display:block;font-size:17px;line-height:1.5}
+.tl .src{display:block;font-size:14px;line-height:1.5;color:var(--soft);margin-top:7px}
+.tl .src a{color:var(--red)}
+.tl.now b{font-size:20px;padding-top:4px}
+.tl.now::before{background:var(--gold)}
+@media(max-width:600px){.timeline::before{left:62px}.tl{grid-template-columns:50px 1fr;column-gap:26px}.tl::before{left:56px}.tl b{font-size:20px}.tl.now b{font-size:16px}}
 
 .flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:22px 0 6px;font-size:17px;color:var(--deep);font-weight:700}
 .flow i{font-style:normal;color:var(--gold);font-size:22px}
@@ -124,7 +131,7 @@ footer.site a{color:#f1dc9b}
 <header class="hero" id="top">
   <div class="kicker">Emmanuel Community · United States</div>
   <h1>God With Us</h1>
-  <p class="sub">A newsletter for friends, neighbors and the curious</p>
+  <p class="sub">A newsletter for friends of the Emmanuel Community</p>
   <div class="three">Adoration <i>✦</i> Compassion <i>✦</i> Evangelization</div>
   <div class="facts"><span>November 2026</span><span>For friends of the Community</span></div>
 </header>
@@ -144,11 +151,14 @@ footer.site a{color:#f1dc9b}
     <p class="lead">The Emmanuel Community is a Catholic community of lay people and clergy: married couples, singles, priests, and consecrated men and women who share one call, to grow in holiness and to live their faith in everyday life.</p>
     <p>It was born in Paris in 1972 out of a prayer group of the Catholic Charismatic Renewal, and today it is present in about sixty countries. In the United States we are young and small, and we are learning to love small beginnings. Here is the story in a few dates.</p>
     <div class="timeline">
-      <div class="tl"><b>1967</b><em>Pittsburgh</em><span>Catholic students at Duquesne ask for prayer to receive the Holy Spirit, and the Catholic Charismatic Renewal begins in the U.S.</span></div>
-      <div class="tl"><b>1972</b><em>Paris</em><span>A small prayer group, waiting on the Spirit, receives the name <i>Emmanuel</i>: God with us.</span></div>
-      <div class="tl"><b>1990</b><em>Kigali</em><span>About thirty brothers and sisters gather for the first weekend of the Community in Rwanda.</span></div>
-      <div class="tl"><b>1992</b><em>Rome</em><span>The Holy See recognizes the Community as a gift for the good of the whole Church.</span></div>
-      <div class="tl"><b>2009</b><em>Public association</em><span>The Church confirms the Community as a public association of the faithful, its mission aimed at the whole Church.</span></div>
+      <div class="tl"><b>1943</b><em>Paris</em><span>Cardinal Suhard, Archbishop of Paris, confirms Pierre Goursat in his calling as a layman: to be an adorer and an evangelizer in the world.<small class="src">Sources: <a href="https://emmanuel.info/wp-content/uploads/2018/05/Biographie-Pierre-Goursat.pdf" target="_blank" rel="noopener">Biography of Pierre Goursat (French)</a> · <a href="https://hozana.org/en/saints/pierre-goursat" target="_blank" rel="noopener">Pierre Goursat (English)</a></small></span></div>
+      <div class="tl"><b>1967</b><em>Pittsburgh</em><span>Catholic students at Duquesne ask for prayer to receive the Holy Spirit, and the Catholic Charismatic Renewal begins in the U.S.<small class="src">Sources: <a href="https://www.thearkandthedoveworldwide.org/how-it-started/" target="_blank" rel="noopener">The Ark and The Dove</a> · <a href="https://www.ncregister.com/news/catholic-charismatic-renewal-celebrates-golden-anniversary" target="_blank" rel="noopener">National Catholic Register</a></small></span></div>
+      <div class="tl"><b>1972</b><em>Paris</em><span>A small prayer group, waiting on the Spirit, receives the name <i>Emmanuel</i>: God with us.<small class="src">Sources: <a href="https://emmanuel.info/en/?p=67842" target="_blank" rel="noopener">Important dates, emmanuel.info</a> · <a href="https://dioceseparis.fr/pierre-goursat-un-laic-au-service.html" target="_blank" rel="noopener">Archdiocese of Paris (French)</a></small></span></div>
+      <div class="tl"><b>1975</b><em>Paray-le-Monial</em><span>Pierre Goursat gathers prayer groups at Paray-le-Monial, where Jesus revealed his Heart to St. Margaret Mary. It becomes the heart of the Community.<small class="src">Sources: <a href="https://emmanuel.info/en/?p=56888" target="_blank" rel="noopener">Paray-le-Monial, emmanuel.info</a> · <a href="https://emmanuel.info/en/?p=67842" target="_blank" rel="noopener">Important dates, emmanuel.info</a></small></span></div>
+      <div class="tl"><b>1991</b><em>Around the world</em><span>When Pierre Goursat dies, the Community has already reached about eighteen countries.<small class="src">Source: <a href="https://emmanuel.info/en/?p=56921" target="_blank" rel="noopener">Our history, emmanuel.info</a></small></span></div>
+      <div class="tl"><b>1992</b><em>Recognition</em><span>On December 8, the Holy See recognizes the Community as an international association of the faithful.<small class="src">Sources: <a href="https://www.laityfamilylife.va/content/laityfamilylife/en/associazioni-e-movimenti/repertorio/comunita-dell_emmanuele.html" target="_blank" rel="noopener">Vatican directory of associations</a> · <a href="https://emmanuel.info/en/wp-content/uploads/sites/2/2025/11/20251024_Decret_EN.pdf" target="_blank" rel="noopener">Vatican decree, 2025</a></small></span></div>
+      <div class="tl"><b>2009</b><em>Public association</em><span>On June 20, the Holy See erects the Community as a public association of the faithful, which confirms that its mission serves the whole Church.<small class="src">Sources: <a href="https://emmanuel.info/en/wp-content/uploads/sites/2/2025/11/20251024_Decret_EN.pdf" target="_blank" rel="noopener">Vatican decree, 2025</a> · <a href="https://iusecclesiae.it/article/download/2569/888/801" target="_blank" rel="noopener">Ius Ecclesiae (canon law journal)</a></small></span></div>
+      <div class="tl now"><b>Today</b><em>Worldwide</em><span>The Community is present in about sixty countries on five continents, and here in the United States we are just beginning.<small class="src">Sources: <a href="https://emmanuel.info/en/all-countries/who-are-we/" target="_blank" rel="noopener">Who are we, emmanuel.info</a> · <a href="https://en.wikipedia.org/wiki/Emmanuel_Community" target="_blank" rel="noopener">Wikipedia</a></small></span></div>
     </div>
   </div>
 </section>
@@ -283,7 +293,7 @@ footer.site a{color:#f1dc9b}
     <p class="lead">When two disciples asked Jesus where he was staying, he did not give them an explanation. He gave them an invitation. It is ours, too.</p>
 
     <div class="join-box">
-      <h3>Join our online group</h3>
+      <h3>Be part of our online group</h3>
       <p>If you would like company in living <b>adoration, compassion and evangelization</b> where you are, you are welcome in our online group.</p>
       <ul>
         <li>Encouragement to live the three gifts in your own daily life</li>
